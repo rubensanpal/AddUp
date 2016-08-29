@@ -220,7 +220,7 @@
                                         <state key="normal" title="&gt;&gt;&gt;"/>
                                         <connections>
                                             <action selector="sendToSingleton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yPK-pH-hNJ"/>
-                                            <segue destination="DFU-fL-koU" kind="presentation" id="2Ll-JZ-LCi"/>
+                                            <segue destination="DFU-fL-koU" kind="presentation" id="rri-rb-fbj"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -322,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FgO-9I-rK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="623" y="100"/>
+            <point key="canvasLocation" x="466" y="93"/>
         </scene>
     </scenes>
 </document>

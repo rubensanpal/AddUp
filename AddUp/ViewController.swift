@@ -13,8 +13,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.labelNumberToDisplay.text = Singleton.sharedInstance.totalAmount
-        self.totalAmount = Singleton.sharedInstance.totalAmountAsFloat
+        self.labelNumberToDisplay.text = String(format: "$%.2f", self.addUpArray())
+        self.totalAmount = self.addUpArray()
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,6 +62,7 @@ class ViewController: UIViewController {
                 self.decimalCounter = -1
                 self.totalAmount = 0.00
                 self.plusButton.alpha = 0.5
+                Singleton.sharedInstance.arrayOfItems = []
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) {
             UIAlertAction in
@@ -73,16 +74,20 @@ class ViewController: UIViewController {
     }
     
     private func addingTotal() {
-        self.totalAmount += Float(numberToDisplay)!
+        Singleton.sharedInstance.arrayOfItems.append(Float(numberToDisplay)!)
+        self.totalAmount = self.addUpArray()
         self.numberToDisplay = ""
         self.labelNumberToDisplay.text = String(format: "Total = $%.2f", self.totalAmount)
         self.decimalClicked = false
         self.decimalCounter = -1
     }
     
-    @IBAction func sendToSingleton(_ sender: UIButton) {
-        Singleton.sharedInstance.totalAmountAsFloat = self.totalAmount
-        Singleton.sharedInstance.totalAmount = String(format: "Total = $%.2f", self.totalAmount)
+    private func addUpArray() -> Float {
+        var amountToReturn: Float = 0.00
+        for i in 0 ..< Singleton.sharedInstance.arrayOfItems.count {
+            amountToReturn += Singleton.sharedInstance.arrayOfItems[i]
+        }
+        return amountToReturn
     }
 }
 //=================================
