@@ -7,14 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D355DC21D70924800D4D755 /* Machia.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D355DBC1D70924800D4D755 /* Machia.ttf */; };
+		9D355DC31D70924800D4D755 /* Marlo Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D355DBD1D70924800D4D755 /* Marlo Bold.ttf */; };
+		9D355DC41D70924800D4D755 /* Massey-Extended Normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D355DBE1D70924800D4D755 /* Massey-Extended Normal.ttf */; };
+		9D355DC51D70924800D4D755 /* Metro Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D355DBF1D70924800D4D755 /* Metro Bold.ttf */; };
+		9D355DC61D70924800D4D755 /* Ministry Script.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D355DC01D70924800D4D755 /* Ministry Script.ttf */; };
+		9D355DC71D70924800D4D755 /* Monika.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 9D355DC11D70924800D4D755 /* Monika.TTF */; };
+		9D355DC81D70946100D4D755 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4DEC4F1D6DDE39001490B9 /* Main.storyboard */; };
 		9D4DEC4C1D6DDE39001490B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4DEC4B1D6DDE39001490B9 /* AppDelegate.swift */; };
 		9D4DEC4E1D6DDE39001490B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4DEC4D1D6DDE39001490B9 /* ViewController.swift */; };
-		9D4DEC511D6DDE39001490B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4DEC4F1D6DDE39001490B9 /* Main.storyboard */; };
 		9D4DEC531D6DDE39001490B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4DEC521D6DDE39001490B9 /* Assets.xcassets */; };
 		9D4DEC561D6DDE39001490B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4DEC541D6DDE39001490B9 /* LaunchScreen.storyboard */; };
+		9D741FF21D74BA260064B267 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D741FF11D74BA260064B267 /* Singleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D355DBC1D70924800D4D755 /* Machia.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Machia.ttf; path = Fonts/Machia.ttf; sourceTree = "<group>"; };
+		9D355DBD1D70924800D4D755 /* Marlo Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Marlo Bold.ttf"; path = "Fonts/Marlo Bold.ttf"; sourceTree = "<group>"; };
+		9D355DBE1D70924800D4D755 /* Massey-Extended Normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Massey-Extended Normal.ttf"; path = "Fonts/Massey-Extended Normal.ttf"; sourceTree = "<group>"; };
+		9D355DBF1D70924800D4D755 /* Metro Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Metro Bold.ttf"; path = "Fonts/Metro Bold.ttf"; sourceTree = "<group>"; };
+		9D355DC01D70924800D4D755 /* Ministry Script.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ministry Script.ttf"; path = "Fonts/Ministry Script.ttf"; sourceTree = "<group>"; };
+		9D355DC11D70924800D4D755 /* Monika.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = Monika.TTF; path = Fonts/Monika.TTF; sourceTree = "<group>"; };
 		9D4DEC481D6DDE38001490B9 /* AddUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4DEC4B1D6DDE39001490B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D4DEC4D1D6DDE39001490B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +35,7 @@
 		9D4DEC521D6DDE39001490B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D4DEC551D6DDE39001490B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D4DEC571D6DDE39001490B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D741FF11D74BA260064B267 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +68,14 @@
 		9D4DEC4A1D6DDE38001490B9 /* AddUp */ = {
 			isa = PBXGroup;
 			children = (
+				9D355DBC1D70924800D4D755 /* Machia.ttf */,
+				9D355DBD1D70924800D4D755 /* Marlo Bold.ttf */,
+				9D355DBE1D70924800D4D755 /* Massey-Extended Normal.ttf */,
+				9D355DBF1D70924800D4D755 /* Metro Bold.ttf */,
+				9D355DC01D70924800D4D755 /* Ministry Script.ttf */,
+				9D355DC11D70924800D4D755 /* Monika.TTF */,
 				9D4DEC4B1D6DDE39001490B9 /* AppDelegate.swift */,
+				9D741FF11D74BA260064B267 /* Singleton.swift */,
 				9D4DEC4D1D6DDE39001490B9 /* ViewController.swift */,
 				9D4DEC4F1D6DDE39001490B9 /* Main.storyboard */,
 				9D4DEC521D6DDE39001490B9 /* Assets.xcassets */,
@@ -124,9 +145,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D355DC21D70924800D4D755 /* Machia.ttf in Resources */,
 				9D4DEC561D6DDE39001490B9 /* LaunchScreen.storyboard in Resources */,
+				9D355DC31D70924800D4D755 /* Marlo Bold.ttf in Resources */,
+				9D355DC61D70924800D4D755 /* Ministry Script.ttf in Resources */,
+				9D355DC41D70924800D4D755 /* Massey-Extended Normal.ttf in Resources */,
+				9D355DC71D70924800D4D755 /* Monika.TTF in Resources */,
+				9D355DC81D70946100D4D755 /* Main.storyboard in Resources */,
+				9D355DC51D70924800D4D755 /* Metro Bold.ttf in Resources */,
 				9D4DEC531D6DDE39001490B9 /* Assets.xcassets in Resources */,
-				9D4DEC511D6DDE39001490B9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D4DEC4E1D6DDE39001490B9 /* ViewController.swift in Sources */,
+				9D741FF21D74BA260064B267 /* Singleton.swift in Sources */,
 				9D4DEC4C1D6DDE39001490B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +330,7 @@
 				9D4DEC5C1D6DDE39001490B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
