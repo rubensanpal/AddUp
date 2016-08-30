@@ -5,6 +5,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var labelNumberToDisplay: UILabel!
     @IBOutlet weak var plusButton: UIButton!
+    @IBOutlet weak var plusSign: UILabel!
     
     var numberToDisplay: String = ""
     var decimalClicked: Bool = false
@@ -15,6 +16,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.labelNumberToDisplay.text = String(format: "$%.2f", self.addUpArray())
         self.totalAmount = self.addUpArray()
+        if self.plusButton.alpha == 0.5 {
+            self.plusSign.alpha = 1.0
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,31 +28,32 @@ class ViewController: UIViewController {
     @IBAction func buttonsManager(_ sender: UIButton) {
         switch sender.tag {
             case 10 :
-                if !decimalClicked {
-                    decimalClicked = true
-                    displayAmount(theString: ".")
+                if !self.decimalClicked {
+                    self.decimalClicked = true
+                    self.displayAmount(theString: ".")
                 }
             case 11 :
                 if sender.alpha != 0.5 {
-                    addingTotal()
+                    self.addingTotal()
                     sender.alpha = 0.5
                 }
             default:
                 self.plusButton.alpha = 1.0
-                displayAmount(theString: String(sender.tag))
+                self.plusSign.alpha = 0.0
+                self.displayAmount(theString: String(sender.tag))
         }
     }
     
     private func displayAmount(theString: String) {
-        if decimalClicked {
-            decimalCounter += 1
-            if decimalCounter <= 2 {
-                numberToDisplay += theString
-                labelNumberToDisplay.text = "$\(numberToDisplay)"
+        if self.decimalClicked {
+            self.decimalCounter += 1
+            if self.decimalCounter <= 2 {
+                self.numberToDisplay += theString
+                self.labelNumberToDisplay.text = "$\(self.numberToDisplay)"
             }
         } else {
-            numberToDisplay += theString
-            labelNumberToDisplay.text = "$\(numberToDisplay)"
+            self.numberToDisplay += theString
+            self.labelNumberToDisplay.text = "$\(self.numberToDisplay)"
         }
     }
     
@@ -62,6 +67,7 @@ class ViewController: UIViewController {
                 self.decimalCounter = -1
                 self.totalAmount = 0.00
                 self.plusButton.alpha = 0.5
+                self.plusSign.alpha = 0.0
                 Singleton.sharedInstance.arrayOfItems = []
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) {
@@ -74,12 +80,13 @@ class ViewController: UIViewController {
     }
     
     private func addingTotal() {
-        Singleton.sharedInstance.arrayOfItems.append(Float(numberToDisplay)!)
+        Singleton.sharedInstance.arrayOfItems.append(Float(self.numberToDisplay)!)
         self.totalAmount = self.addUpArray()
         self.numberToDisplay = ""
         self.labelNumberToDisplay.text = String(format: "Total = $%.2f", self.totalAmount)
         self.decimalClicked = false
         self.decimalCounter = -1
+        self.plusSign.alpha = 1.0
     }
     
     private func addUpArray() -> Float {

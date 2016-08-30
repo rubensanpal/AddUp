@@ -19,6 +19,7 @@
 		9D4DEC531D6DDE39001490B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4DEC521D6DDE39001490B9 /* Assets.xcassets */; };
 		9D4DEC561D6DDE39001490B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4DEC541D6DDE39001490B9 /* LaunchScreen.storyboard */; };
 		9D741FF21D74BA260064B267 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D741FF11D74BA260064B267 /* Singleton.swift */; };
+		9D7E0FCD1D75D67800D2ADFA /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7E0FCC1D75D67800D2ADFA /* TableController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		9D4DEC551D6DDE39001490B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D4DEC571D6DDE39001490B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D741FF11D74BA260064B267 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		9D7E0FCC1D75D67800D2ADFA /* TableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				9D4DEC4B1D6DDE39001490B9 /* AppDelegate.swift */,
 				9D741FF11D74BA260064B267 /* Singleton.swift */,
 				9D4DEC4D1D6DDE39001490B9 /* ViewController.swift */,
+				9D7E0FCC1D75D67800D2ADFA /* TableController.swift */,
 				9D4DEC4F1D6DDE39001490B9 /* Main.storyboard */,
 				9D4DEC521D6DDE39001490B9 /* Assets.xcassets */,
 				9D4DEC541D6DDE39001490B9 /* LaunchScreen.storyboard */,
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D7E0FCD1D75D67800D2ADFA /* TableController.swift in Sources */,
 				9D4DEC4E1D6DDE39001490B9 /* ViewController.swift in Sources */,
 				9D741FF21D74BA260064B267 /* Singleton.swift in Sources */,
 				9D4DEC4C1D6DDE39001490B9 /* AppDelegate.swift in Sources */,

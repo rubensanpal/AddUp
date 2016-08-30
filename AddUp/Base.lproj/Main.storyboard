@@ -4,12 +4,13 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Metro Bold.ttf">
-            <string>MetroBold</string>
+        <array key="Marlo Bold.ttf">
+            <string>MarloBold</string>
         </array>
     </customFonts>
     <scenes>
@@ -22,7 +23,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7tK-zj-qTN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Flw-a8-pHy" userLabel="bg">
@@ -38,6 +39,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="RMH-FF-LlC"/>
                                                     <constraint firstAttribute="width" constant="80" id="VnZ-ZW-OC4"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="MarloBold" family="Marlo" pointSize="17"/>
                                                 <state key="normal" title="7"/>
                                                 <connections>
                                                     <action selector="buttonsManager:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dn7-dt-wDU"/>
@@ -49,6 +51,7 @@
                                                     <constraint firstAttribute="width" constant="80" id="Dgf-AT-lws"/>
                                                     <constraint firstAttribute="height" constant="60" id="jw3-gu-3xr"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="MarloBold" family="Marlo" pointSize="17"/>
                                                 <state key="normal" title="8"/>
                                                 <connections>
                                                     <action selector="buttonsManager:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hAu-vd-uP3"/>
@@ -60,6 +63,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="40Z-DD-clN"/>
                                                     <constraint firstAttribute="width" constant="80" id="dg6-6k-KhQ"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="MarloBold" family="Marlo" pointSize="17"/>
                                                 <state key="normal" title="9"/>
                                                 <connections>
                                                     <action selector="buttonsManager:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UDa-s0-on5"/>
@@ -71,6 +75,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="Wl9-wu-fXJ"/>
                                                     <constraint firstAttribute="width" constant="80" id="Xix-RL-9Nk"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="MarloBold" family="Marlo" pointSize="17"/>
                                                 <state key="normal" title="4"/>
                                                 <connections>
                                                     <action selector="buttonsManager:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IGO-do-ihV"/>
@@ -82,6 +87,7 @@
                                                     <constraint firstAttribute="width" constant="80" id="UE5-pH-KkS"/>
                                                     <constraint firstAttribute="height" constant="60" id="d4o-vS-Sxv"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="MarloBold" family="Marlo" pointSize="17"/>
                                                 <state key="normal" title="5"/>
                                                 <connections>
                                                     <action selector="buttonsManager:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H8G-d3-b47"/>
@@ -93,6 +99,7 @@
                                                     <constraint firstAttribute="width" constant="80" id="IJR-a2-7c8"/>
                                                     <constraint firstAttribute="height" constant="60" id="IM1-Fe-I1N"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="MarloBold" family="Marlo" pointSize="17"/>
                                                 <state key="normal" title="6"/>
                                                 <connections>
                                                     <action selector="buttonsManager:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Plr-Wb-Rj5"/>
@@ -104,6 +111,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="13D-Ln-FsL"/>
                                                     <constraint firstAttribute="width" constant="80" id="qzd-JI-fB8"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="MarloBold" family="Marlo" pointSize="17"/>
                                                 <state key="normal" title="1"/>
                                                 <connections>
                                                     <action selector="buttonsManager:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rpI-mu-TEs"/>
@@ -115,6 +123,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="Azg-Ou-CGA"/>
                                                     <constraint firstAttribute="width" constant="80" id="h4S-ul-BDw"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="MarloBold" family="Marlo" pointSize="17"/>
                                                 <state key="normal" title="2"/>
                                                 <connections>
                                                     <action selector="buttonsManager:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s0t-Uj-O54"/>
@@ -126,6 +135,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="Aa0-t7-BkE"/>
                                                     <constraint firstAttribute="width" constant="80" id="ZMq-W1-Pnp"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="MarloBold" family="Marlo" pointSize="17"/>
                                                 <state key="normal" title="3"/>
                                                 <connections>
                                                     <action selector="buttonsManager:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NX9-A1-0i7"/>
@@ -137,6 +147,7 @@
                                                     <constraint firstAttribute="width" constant="168" id="TOY-SU-CzO"/>
                                                     <constraint firstAttribute="height" constant="60" id="hZN-gA-9ah"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="MarloBold" family="Marlo" pointSize="17"/>
                                                 <state key="normal" title="0"/>
                                                 <connections>
                                                     <action selector="buttonsManager:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NSg-Tz-y70"/>
@@ -148,8 +159,8 @@
                                                     <constraint firstAttribute="width" constant="256" id="8Yi-Ly-eH6"/>
                                                     <constraint firstAttribute="height" constant="60" id="A7V-ES-N96"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <state key="normal" title="+"/>
+                                                <fontDescription key="fontDescription" name="MarloBold" family="Marlo" pointSize="21"/>
+                                                <state key="normal" title="+ / ="/>
                                                 <connections>
                                                     <action selector="buttonsManager:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bKu-Dt-Zh4"/>
                                                 </connections>
@@ -160,7 +171,7 @@
                                                     <constraint firstAttribute="width" constant="80" id="3jP-2Y-EhX"/>
                                                     <constraint firstAttribute="height" constant="60" id="gck-fj-yTf"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                <fontDescription key="fontDescription" name="MarloBold" family="Marlo" pointSize="25"/>
                                                 <state key="normal" title="."/>
                                                 <connections>
                                                     <action selector="buttonsManager:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iTQ-NW-zZF"/>
@@ -219,7 +230,6 @@
                                         </constraints>
                                         <state key="normal" title="&gt;&gt;&gt;"/>
                                         <connections>
-                                            <action selector="sendToSingleton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yPK-pH-hNJ"/>
                                             <segue destination="DFU-fL-koU" kind="presentation" id="rri-rb-fbj"/>
                                         </connections>
                                     </button>
@@ -241,6 +251,7 @@
                                             <constraint firstAttribute="width" constant="201" id="ZAq-fC-xoj"/>
                                             <constraint firstAttribute="height" constant="30" id="rb9-Lt-t5O"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="MarloBold" family="Marlo" pointSize="21"/>
                                         <state key="normal" title="Erase"/>
                                         <connections>
                                             <action selector="erase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RDP-dh-hsl"/>
@@ -252,17 +263,28 @@
                                             <constraint firstAttribute="height" constant="30" id="Ngp-vP-E6K"/>
                                             <constraint firstAttribute="width" constant="201" id="xQG-A6-ihi"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="MetroBold" family="Metro" pointSize="21"/>
+                                        <fontDescription key="fontDescription" name="MarloBold" family="Marlo" pointSize="18"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5NM-Yl-vjg">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="22" id="sBk-Hz-bSN"/>
+                                            <constraint firstAttribute="height" constant="21" id="wYb-bG-zBj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarloBold" family="Marlo" pointSize="21"/>
+                                        <color key="textColor" red="0.18825244819571407" green="0.50771243635199281" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="GPH-ye-1zk" firstAttribute="leading" secondItem="5NM-Yl-vjg" secondAttribute="trailing" constant="4" id="Kxb-mn-Gfw"/>
                                     <constraint firstItem="Ddy-f3-Tt4" firstAttribute="centerY" secondItem="IJB-gr-hGP" secondAttribute="centerY" constant="19" id="N87-yA-OYc"/>
                                     <constraint firstItem="Ddy-f3-Tt4" firstAttribute="centerX" secondItem="IJB-gr-hGP" secondAttribute="centerX" id="drB-2o-2ac"/>
                                     <constraint firstItem="GPH-ye-1zk" firstAttribute="centerX" secondItem="IJB-gr-hGP" secondAttribute="centerX" id="gB4-e1-SKC"/>
                                     <constraint firstItem="GPH-ye-1zk" firstAttribute="centerY" secondItem="IJB-gr-hGP" secondAttribute="centerY" constant="-19" id="jgQ-1Y-a8d"/>
+                                    <constraint firstItem="GPH-ye-1zk" firstAttribute="centerY" secondItem="5NM-Yl-vjg" secondAttribute="centerY" id="kd0-Yo-LBJ"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -290,39 +312,58 @@
                     <connections>
                         <outlet property="labelNumberToDisplay" destination="GPH-ye-1zk" id="tdP-Fg-17G"/>
                         <outlet property="plusButton" destination="40H-zs-RQN" id="eX7-Ir-d5s"/>
+                        <outlet property="plusSign" destination="5NM-Yl-vjg" id="bsj-Zp-BCH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-170.625" y="100.35211267605634"/>
+            <point key="canvasLocation" x="-172" y="100.29985007496252"/>
         </scene>
-        <!--View Controller-->
+        <!--Table Controller-->
         <scene sceneID="dwR-HK-IpI">
             <objects>
-                <viewController id="DFU-fL-koU" sceneMemberID="viewController">
+                <viewController id="DFU-fL-koU" customClass="TableController" customModule="AddUp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Iek-AF-CGc"/>
                         <viewControllerLayoutGuide type="bottom" id="xII-fM-wEj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TUO-KN-Llf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bp0-q1-RWQ">
-                                <frame key="frameInset" minX="16" minY="36" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Xr-ai-dcN">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="DFU-fL-koU" id="W48-oF-k3w"/>
+                                    <outlet property="delegate" destination="DFU-fL-koU" id="hoM-6e-Uga"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bp0-q1-RWQ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="S0R-Bh-dgN"/>
+                                    <constraint firstAttribute="width" constant="30" id="ya9-Av-L8X"/>
+                                </constraints>
+                                <state key="normal" title="&lt;&lt;&lt;"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="FeI-vy-hNA"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.98457335400000001" blue="0.61692967629999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4Xr-ai-dcN" firstAttribute="trailing" secondItem="TUO-KN-Llf" secondAttribute="trailingMargin" id="FW4-AG-y3j"/>
+                            <constraint firstItem="4Xr-ai-dcN" firstAttribute="top" secondItem="bp0-q1-RWQ" secondAttribute="bottom" constant="8" id="FwW-Fd-hhR"/>
+                            <constraint firstItem="xII-fM-wEj" firstAttribute="top" secondItem="4Xr-ai-dcN" secondAttribute="bottom" constant="20" id="L4D-Yw-gAJ"/>
+                            <constraint firstItem="bp0-q1-RWQ" firstAttribute="leading" secondItem="TUO-KN-Llf" secondAttribute="leadingMargin" constant="5" id="cEs-cS-LJl"/>
+                            <constraint firstItem="4Xr-ai-dcN" firstAttribute="leading" secondItem="TUO-KN-Llf" secondAttribute="leadingMargin" id="f9K-oz-tfK"/>
+                            <constraint firstItem="bp0-q1-RWQ" firstAttribute="top" secondItem="Iek-AF-CGc" secondAttribute="bottom" constant="22" id="lpx-jH-Mvd"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FgO-9I-rK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="466" y="93"/>
+            <point key="canvasLocation" x="533.60000000000002" y="93.103448275862078"/>
         </scene>
     </scenes>
 </document>

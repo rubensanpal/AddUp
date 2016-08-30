@@ -27,6 +27,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Metro Bold.ttf</string>
+		<string>Marlo Bold.ttf</string>
 	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
