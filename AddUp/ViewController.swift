@@ -6,14 +6,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelNumberToDisplay: UILabel!
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var plusSign: UILabel!
+    @IBOutlet weak var taxesButton: UIButton!
     
     var numberToDisplay: String = ""
     var decimalClicked: Bool = false
     var decimalCounter: Int = -1
     var totalAmount: Float = 0.00
     
+    var quebecTaxesObj: QuebecTaxes!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.quebecTaxesObj = QuebecTaxes()
         self.labelNumberToDisplay.text = String(format: "$%.2f", self.addUpArray())
         self.totalAmount = self.addUpArray()
         if self.plusButton.alpha == 0.5 {
@@ -36,9 +40,17 @@ class ViewController: UIViewController {
                 if sender.alpha != 0.5 {
                     self.addingTotal()
                     sender.alpha = 0.5
+                    self.taxesButton.alpha = 0.5
+                }
+            case 12 :
+                if sender.alpha != 0.5 {
+                    self.addingTotalWithTaxes()
+                    sender.alpha = 0.5
+                    self.plusButton.alpha = 0.5
                 }
             default:
                 self.plusButton.alpha = 1.0
+                self.taxesButton.alpha = 1.0
                 self.plusSign.alpha = 0.0
                 self.displayAmount(theString: String(sender.tag))
         }
@@ -67,6 +79,7 @@ class ViewController: UIViewController {
                 self.decimalCounter = -1
                 self.totalAmount = 0.00
                 self.plusButton.alpha = 0.5
+                self.taxesButton.alpha = 0.5
                 self.plusSign.alpha = 0.0
                 Singleton.sharedInstance.arrayOfItems = []
         }
@@ -81,6 +94,17 @@ class ViewController: UIViewController {
     
     private func addingTotal() {
         Singleton.sharedInstance.arrayOfItems.append(Float(self.numberToDisplay)!)
+        self.totalAmount = self.addUpArray()
+        self.numberToDisplay = ""
+        self.labelNumberToDisplay.text = String(format: "Total = $%.2f", self.totalAmount)
+        self.decimalClicked = false
+        self.decimalCounter = -1
+        self.plusSign.alpha = 1.0
+    }
+    
+    private func addingTotalWithTaxes() {
+        let amountWithTaxes = self.quebecTaxesObj.getAmountWithTaxes(initialAmount: Float(self.numberToDisplay)!)
+        Singleton.sharedInstance.arrayOfItems.append(Float(amountWithTaxes)!)
         self.totalAmount = self.addUpArray()
         self.numberToDisplay = ""
         self.labelNumberToDisplay.text = String(format: "Total = $%.2f", self.totalAmount)

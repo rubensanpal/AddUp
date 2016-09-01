@@ -18,9 +18,9 @@ class TableController: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier:"cell")
-        cell.textLabel!.text = "$\(Singleton.sharedInstance.arrayOfItems[indexPath.row])"
+        cell.textLabel!.text = String(format: "$%.2f", Singleton.sharedInstance.arrayOfItems[indexPath.row])
         
-        cell.textLabel?.textColor = UIColor.black
+        cell.textLabel?.textColor = UIColor.white
         cell.backgroundColor = UIColor.clear
         
         return cell
