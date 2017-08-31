@@ -3,9 +3,14 @@ import UIKit
 import Foundation
 //=================================
 class TableController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
+    //# MARK: - IBOutlets
     @IBOutlet weak var simplePicker: UIPickerView!
+    
+    //# MARK: - Properties
     var data = ["10"]
     var budget: Int = 0
+    
+    //# MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,62 +22,70 @@ class TableController: UIViewController, UITableViewDelegate, UITableViewDataSou
         self.simplePicker.selectRow(theRow, inComponent: 0, animated: true)
     }
 
+    //# MARK: - didReceiveMemoryWarning
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    //# MARK: - tableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tableView.backgroundColor = UIColor.clear
         return Singleton.sharedInstance.arrayOfItems.count
     }
     
+    //# MARK: - tableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier:"cell")
         cell.textLabel!.text = String(format: "$%.2f", Singleton.sharedInstance.arrayOfItems[indexPath.row])
         
         cell.textLabel?.textColor = UIColor.white
         cell.backgroundColor = UIColor.clear
+        cell.textLabel?.font = UIFont(name: "MetroBold", size: 32)
         
         return cell
     }
     
+    //# MARK: - tableView
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
             Singleton.sharedInstance.arrayOfItems.remove(at: indexPath.row)
+            Singleton.sharedInstance.saveArray()
             tableView.deleteRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.automatic)
         }
     }
     
+    //# MARK: - numberOfComponents
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        // Column count: use one column.
         return 1
     }
     
-    func pickerView(_ pickerView: UIPickerView,
-                    numberOfRowsInComponent component: Int) -> Int {
+    //# MARK: - pickerView
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
-        // Row count: rows equals array length.
         return data.count
     }
     
-    func pickerView(_ pickerView: UIPickerView,
-                    titleForRow row: Int,
-                    forComponent component: Int) -> String? {
-        
-        // Return a string from the array for this row.
+    //# MARK: - pickerView
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return data[row]
     }
     
+    //# MARK: - pickerView
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.budget = Int(self.data[row])!
     }
     
-    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let titleData = data[row]
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!,NSForegroundColorAttributeName:UIColor.white])
-        return myTitle
+    //# MARK: - pickerView
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let pickerLabel = UILabel()
+        pickerLabel.textColor = UIColor.white
+        pickerLabel.text = data[row]
+        pickerLabel.font = UIFont(name: "MetroBold", size: 24)
+        pickerLabel.textAlignment = NSTextAlignment.center
+        return pickerLabel
     }
-    
+
+    //# MARK: - settingBudget
     @IBAction func settingBudget(_ sender: UIButton) {
         Singleton.sharedInstance.setBudget(aBudget: self.budget)
     }

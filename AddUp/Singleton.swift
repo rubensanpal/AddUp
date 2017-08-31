@@ -32,6 +32,11 @@ class Singleton
         defaults.set(self.arrayOfItems, forKey: "theArray")
     }
     
+    //# MARK: - addToArray
+    func saveArray() {
+        defaults.set(self.arrayOfItems, forKey: "theArray")
+    }
+    
     //# MARK: - emptyArray
     func emptyArray() {
         self.arrayOfItems = []

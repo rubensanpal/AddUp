@@ -10,6 +10,35 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    
+    // MARK: - Types
+    
+    enum ShortcutIdentifier: String {
+        case First
+        case Second
+        case Third
+        case Fourth
+        
+        // MARK: - Initializers
+        
+        init?(fullType: String) {
+            guard let last = fullType.components(separatedBy: ".").last else {return nil}
+            
+            
+            self.init(rawValue: last)
+        }
+        
+        // MARK: - Properties
+        
+        var type: String {
+            return Bundle.main.bundleIdentifier! + ".\(self.rawValue)"
+        }
+    }
+    
+    // MARK: - Static Properties
+    
+    static let applicationShortcutUserInfoIconKey = "applicationShortcutUserInfoIconKey"
 
     var window: UIWindow?
 
@@ -35,6 +64,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        let handledShortCutItem = handleShortCutItem(shortcutItem: shortcutItem)
+        
+        completionHandler(handledShortCutItem)
+    }
+    
+    func handleShortCutItem(shortcutItem: UIApplicationShortcutItem) -> Bool {
+        var handled = false
+        
+        // Verify that the provided `shortcutItem`'s `type` is one handled by the application.
+        guard ShortcutIdentifier(fullType: shortcutItem.type) != nil else { return false }
+        
+        guard let shortCutType = shortcutItem.type as String? else { return false }
+        
+        switch (shortCutType) {
+        case ShortcutIdentifier.First.type:
+            handled = true
+            break
+        case ShortcutIdentifier.Second.type:
+            // Handle shortcut 2 (static).
+            self.window?
+            .rootViewController!
+            .performSegue(withIdentifier: "mySeg", sender: nil)
+            handled = true
+            break
+        case ShortcutIdentifier.Third.type:
+            // Handle shortcut 3 (dynamic).
+            handled = true
+            break
+        case ShortcutIdentifier.Fourth.type:
+            // Handle shortcut 4 (dynamic).
+            handled = true
+            break
+        default:
+            break
+        }
+        
+        
+        return handled
+    }
+    
+    func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
+        
+        let handledShortCutItem = handleShortCutItem(shortcutItem: shortcutItem)
+        
+        completionHandler(handledShortCutItem)
 
+        
+    }
 }
 

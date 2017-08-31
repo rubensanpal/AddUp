@@ -31,7 +31,7 @@ class ViewController: UIViewController {
             self.plusSign.alpha = 1.0
         }
         self.h = self.deviceHeight.frame.size.height
-        self.w = self.deviceHeight.frame.size.width
+        self.w = self.deviceHeight.frame.size.width + 170
     }
     
     //# MARK: - informationToDisplay
@@ -44,22 +44,7 @@ class ViewController: UIViewController {
         return "\(b)\n\(s)"
     }
     
-    //# MARK: - viewDidLayoutSubviews
-    override func viewDidLayoutSubviews() {
-        let currentDevice: UIDevice = UIDevice.current
-        let orientation: UIDeviceOrientation = currentDevice.orientation
-        if orientation.isLandscape {
-            if self.h == 568 && self.w == 320 {
-                self.viewHeightConstraint.constant = (self.w * 2)
-            } else if self.h == 480 && self.w == 320 {
-                self.viewHeightConstraint.constant = (self.w * 1.7)
-            } else {
-                self.viewHeightConstraint.constant = (self.w * 1.3937)
-            }
-        } else {
-            self.viewHeightConstraint.constant = (self.h * 0.7852)
-        }
-    }
+
     
     //# MARK: -
     override func didReceiveMemoryWarning() {
