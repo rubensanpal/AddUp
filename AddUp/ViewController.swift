@@ -9,6 +9,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var taxesButton: UIButton!
     @IBOutlet weak var viewHeightConstraint: NSLayoutConstraint!
     @IBOutlet var deviceHeight: UIView!
+    @IBOutlet weak var scroll: UIScrollView!
+    @IBOutlet weak var viewInScroll: UIView!
+    
     
     //# MARK: - Properties
     var numberToDisplay: String = ""
@@ -23,6 +26,11 @@ class ViewController: UIViewController {
     
     //# MARK: - viewDidLoad
     override func viewDidLoad() {
+        super.viewDidLoad()
+        scroll.contentOffset.y = viewInScroll.bounds.height - scroll.bounds.height
+        UIView.animate(withDuration: 5.0, delay: 0.5, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            self.scroll.contentOffset.y = 0
+        }, completion: nil)
         super.viewDidLoad()
         self.michiganTaxeObj = MichiganTaxe()
         self.labelNumberToDisplay.text = self.informationToDisplay(theSum: self.addUpArray())
